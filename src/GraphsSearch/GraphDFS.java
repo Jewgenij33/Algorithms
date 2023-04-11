@@ -3,26 +3,28 @@ package GraphsSearch;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-public class Graph {
+public class GraphDFS {
     public static void main(String[] args) {
-        Graph g = new Graph(4);
-        g.addEdge(0,1);
-        g.addEdge(0,2);
-        g.addEdge(1,2);
-        g.addEdge(2,3);
-//        g.addEdge(4,3);
-//        g.addEdge(2,3);
+        GraphDFS g = new GraphDFS(4);
+         g.addEdge(0,1);
+         g.addEdge(0,2);
+         g.addEdge(1,2);
+         g.addEdge(2,3);
+//       g.addEdge(4,3);
+//       g.addEdge(2,3);
 
         System.out.println();
         System.out.println("Following is Depth First Traversal");
 
         g.DFS(2);
+
+
     }
 
         private LinkedList<Integer> adjList[];
         private boolean visited[];
 //create Graph
-        Graph (int vertices){
+        GraphDFS(int vertices){
             adjList = new LinkedList[vertices];
             visited = new boolean[vertices];
 
